@@ -1,0 +1,14 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+    <rdf:Description rdf:about="http://example.org/book/1">
+        <dc:title>WEb Book 1</dc:title>
+        <dc:author>Author Alem</dc:author>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/book/2">
+        <dc:title>Web  Book 2</dc:title>
+        <dc:author>Animaw </dc:author>
+    </rdf:Description>
+
+</rdf:RDF>

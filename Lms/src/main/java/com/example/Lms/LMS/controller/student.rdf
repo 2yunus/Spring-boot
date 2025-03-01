@@ -1,0 +1,45 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ex="http://example.org/schema#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  <rdf:Description rdf:about="http://example.org/schema#student/3">
+    <foaf:mbox>mailto:jane.smith@example.com</foaf:mbox>
+    <foaf:name>Jane</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#student/4">
+    <foaf:mbox>mailto:alice.johnson@example.com</foaf:mbox>
+    <foaf:name>Alice</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#student/5">
+    <foaf:mbox>mailto:bob.brown@example.com</foaf:mbox>
+    <foaf:name>Bob</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#student/6">
+    <foaf:mbox>mailto:charlie.davis@example.com</foaf:mbox>
+    <foaf:name>Charlie</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#student/11">
+    <foaf:mbox>mailto:olivia.thomas@example.com</foaf:mbox>
+    <foaf:name>Olivia</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#student/10">
+    <foaf:mbox>mailto:daniel.anderson@example.com</foaf:mbox>
+    <foaf:name>Daniel</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#student/2">
+    <foaf:mbox>mailto:john.doe@example.com</foaf:mbox>
+    <foaf:name>John</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#student/7">
+    <foaf:mbox>mailto:emma.taylor@example.com</foaf:mbox>
+    <foaf:name>Emma</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#student/8">
+    <foaf:mbox>mailto:michael.wilson@example.com</foaf:mbox>
+    <foaf:name>Michael</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#student/9">
+    <foaf:mbox>mailto:sophia.martinez@example.com</foaf:mbox>
+    <foaf:name>Sophia</foaf:name>
+  </rdf:Description>
+</rdf:RDF>

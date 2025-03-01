@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create New Instructor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css"/>
+</head>
+<body>
+<div align="center">
+    <h1>Create New Instructor</h1>
+    <br />
+    <div class="col-sm-4">
+        <form action="#" th:action="@{/enrollments/save}" th:object="${enrollment}" method="post">
+            <div align="left">
+                <label class="form-label">Student Name</label>
+                <input type="text" th:field="*{studentName}" class="form-control" placeholder="Student Name" />
+                <p th:if="${#fields.hasErrors('studentName')}" th:errors="*{studentName}" class="text-danger">Name is required</p>
+            </div>
+            <br />
+            <div align="left">
+                <label class="form-label">enrolledCourse</label>
+                <input type="text" th:field="*{enrolledCourse}" class="form-control" placeholder="enrolledCourse" />
+                <p th:if="${#fields.hasErrors('enrolledCourse')}" th:errors="*{enrolledCourse}" class="text-danger">enrolledCourse is required</p>
+            </div>
+            <br />
+            <div align="left">
+                <label class="form-label">enrollmentDate</label>
+                <input type="date" th:field="*{enrollmentDate}" class="form-control" placeholder="enrollmentDate" />
+                <p th:if="${#fields.hasErrors('enrollmentDate')}" th:errors="*{enrollmentDate}" class="text-danger">enrollmentDate is required</p>
+            </div>
+            <button type="submit" class="btn btn-info">Save</button>
+        </form>
+    </div>
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

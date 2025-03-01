@@ -1,0 +1,112 @@
+* {
+    /* font-family: Verdana, Arial, sans-serif; */
+    font-family: Jost, "Source Sans Pro";
+}
+
+main {
+    margin-top: 10%;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-family: Jost, "Source Sans Pro";
+    padding: 0.4rem;
+    transition: 0.5s;
+}
+
+.card-div {
+    width: 80%;
+    height: 200px;
+    background-color: #EEF8E9;
+    margin: 3%;
+    padding: 1%;
+    color: black;
+    /* line-height: 200px; */
+    transition: transform 0.3s ease;
+    border-radius: 0%;
+    border-top-right-radius: 2%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    overflow: auto;
+    position: relative;
+}
+
+.card-div:hover {
+    background-color: #C0FBC4;
+    transform: translateX(10px) scale(1.05);
+}
+
+.card-div::before {
+    content: ".................................";
+    font-weight: 900;
+    font-size: 1px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.user-id {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #0A9055;
+    height: 100%;
+    width: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.user-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-info,
+.item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* line-height: 4%; */
+    gap: 5%;
+    padding: 2%;
+    flex-wrap: wrap;
+}
+
+.user-delete,
+.item-delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 10%;
+}
+
+.delete-user-btn,
+.delete-item-btn {
+    justify-content: center;
+    text-align: center;
+}
+
+.delete-item-btn:hover {
+    background-color: red;
+}
+
+.delete-user-btn:hover {
+    background-color: red;
+}
+
+.delete-user-icon,
+.delete-item-icon {
+    width: 18px;
+    height: 20px;
+}

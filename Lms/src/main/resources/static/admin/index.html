@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A600" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A400%2C500%2C600" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C600%2C700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A700" />
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+     <link rel="stylesheet" href="../css/responsive.css">
+    
+    <!-- <link rel="stylesheet" href="../css/styles.css">
+     -->
+    <link rel="stylesheet" href="adminStyle.css?v=1">
+    <!-- <script src="script.js"></script> -->
+</head>
+<body>
+<header>
+
+<nav class="navbar">
+<input type="checkbox" name="" id="check">
+
+    <div class="navbar-links">
+        <div class="logo">
+        <img src="logo_image.png" alt="logo image" style="height: 100px; width: 100px;">
+
+        </div>
+        <div class="links">
+            <ul>
+            <li><a href="#">Dashboard</a></li>
+                <li><a href="items.php">Items</a></li>
+                <li><a href="users.php">Users</a></li>
+                <li><a href="manageAuctions.php">manageAuction</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <label for="check" class="checkbtn">
+                <i class="fas fa-bars" ></i>
+            </label>
+</nav>
+</header>
+
+<section class="welcome">
+<h2>Admin Dashboard</h2>
+        <p>Welcome to the admin dashboard! You can manage various aspects of the system here.</p>
+</section>
+    
+    <main id="main-dashboard" >
+        
+<aside id="left-section" style=" width:50%;">
+
+
+<!-- HTML code with PHP variables embedded -->
+<div class="main-card" onclick="navigateToInstructors()">
+    <div class="inner-card-div">
+        <div class="card-title">Manage <Br>Instructor</div>
+        <div class="card-discription">
+            <div class="title-number">
+                <div class="sub-title">Total Instructors</div>
+                <div class="total-number"><?php echo $totalUsers; ?></div>
+            </div>
+            <div class="categories">
+                <div class="category1"><?php echo $maleCount; ?> Male</div>
+                <div class="category2"> / <?php echo $femaleCount; ?> Female</div>
+            </div>
+            <div class="card-summary"></div>
+        </div>
+    </div>
+    <img class="users-gif" src="instructer1.png" />
+</div>
+
+<script>
+    function navigateToInstructors() {
+        window.location.href = "users.php"; // Replace with the desired URL
+    }
+</script>
+
+
+<div class="main-item-card" onclick="navigateToCourses()">
+    <div class="inner-card-div">
+        <div class="card-title">Manage<Br> Courses</div>
+        <div class="card-discription">
+            <div class="title-number">
+                <div class="sub-title">Total Courses</div>
+                <div class="total-number"><?php echo $totalItems; ?></div>
+            </div>
+          
+            <div class="card-summary"></div>
+        </div>
+    </div>
+    <img class="users-gif" src="course1.png" />
+</div>
+
+<script>
+    function navigateToCourses() {
+        window.location.href = "items.php"; // Replace with the desired URL
+    }
+</script>
+
+</aside>
+
+<aside id="right-section">
+<div class="main-category-card">
+
+
+<div class="main-item-card categories-card" onclick="navigateToStudents()">
+    <div class="inner-card-div">
+        <div class="card-title">Manage Students</div>
+        <div class="card-discription">
+            <div class="title-number">
+                <div class="sub-title">Total Students</div>
+                <div class="total-number">8</div>
+            </div>
+            <div class="categories">
+            </div>
+            <div class="card-summary">...</div>
+           
+        </div>
+        
+    </div>
+    <img class="users-gif" src="student.png" />
+    <script>
+        function navigateToStudents() {
+            window.location.href = "dosth.php"; // Replace with the desired URL
+        }
+    </script>
+   
+</div>
+</div>
+
+</aside>
+    
+    </main>
+
+    <footer id="foot">
+        <p>&copy; <?php echo date('Y'); ?> Admin Dashboard. All rights reserved.</p>
+    </footer>
+
+    
+    <script type="text/javascript">
+        window.addEventListener("scroll", function() {
+            var nav = document.querySelector("header");
+            nav.classList.toggle("sticky", window.scrollY > 0);
+        });
+    </script>
+</body>
+</html>

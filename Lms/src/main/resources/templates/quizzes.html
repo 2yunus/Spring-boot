@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .col-sm-5 {
+        text-align: center;
+    }
+</style>
+<body>
+<div>
+    <h2>Spring Boot Crud System - Learning management system</h2>
+    <div align="left">
+        <h3><a th:href="@{/Quizzes/quiz-form}">Add new</a></h3>
+    </div>
+    <div class="col-sm-5" align="center">
+        <div class="panel-body" align="center">
+            <table class="table">
+                <thead class="thead-blue">
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>questions</th>
+                    <th>course</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="quiz : ${quizzes}">
+                    <td th:text="${quiz.id}">id</td>
+                    <td th:text="${quiz.title}">title</td>
+                    <td th:text="${quiz.questions}">questions</td>
+                    <td th:text="${quiz.course.title}">course_title</td>
+                    <td>
+                        <a th:href="@{'/Quizzes/edit/' + ${quiz.id}}">Edit</a>
+                    </td>
+                    <td>
+                        <a th:href="@{/Quizzes/delete/{id}(id=${quiz.id})}">Delete</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

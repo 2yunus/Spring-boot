@@ -1,0 +1,126 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ex="http://example.org/schema#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  <rdf:Description rdf:about="http://example.org/course/MATH201">
+    <ex:courseName>Calculus I</ex:courseName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#course/CalculusI">
+    <ex:courseName>Calculus I</ex:courseName>
+  </rdf:Description>
+  <ex:Instructor rdf:about="http://example.org/schema#instructor/Dr.MarieCurie">
+    <ex:coursesTeaching>
+      <rdf:Description rdf:about="http://example.org/schema#course/Biology">
+        <ex:courseName>Biology</ex:courseName>
+      </rdf:Description>
+    </ex:coursesTeaching>
+    <foaf:name>Dr. Marie Curie</foaf:name>
+  </ex:Instructor>
+  <ex:Instructor rdf:about="http://example.org/schema#instructor/Dr.AdamSmith">
+    <ex:coursesTeaching>
+      <rdf:Description rdf:about="http://example.org/schema#course/Economics">
+        <ex:courseName>Economics</ex:courseName>
+      </rdf:Description>
+    </ex:coursesTeaching>
+    <foaf:name>Dr. Adam Smith</foaf:name>
+  </ex:Instructor>
+  <ex:Instructor rdf:about="http://example.org/schema#instructor/Dr.SigmundFreud">
+    <ex:coursesTeaching>
+      <rdf:Description rdf:about="http://example.org/schema#course/Psychology">
+        <ex:courseName>Psychology</ex:courseName>
+      </rdf:Description>
+    </ex:coursesTeaching>
+    <foaf:name>Dr. Sigmund Freud</foaf:name>
+  </ex:Instructor>
+  <rdf:Description rdf:about="http://example.org/course/HIST201">
+    <ex:courseName>World History</ex:courseName>
+  </rdf:Description>
+  <ex:Instructor rdf:about="http://example.org/schema#instructor/a">
+    <ex:coursesTeaching>
+      <rdf:Description rdf:about="http://example.org/schema#course/IntroductiontoComputerScience">
+        <ex:courseName>Introduction to Computer Science</ex:courseName>
+      </rdf:Description>
+    </ex:coursesTeaching>
+    <foaf:name>a</foaf:name>
+  </ex:Instructor>
+  <ex:Instructor rdf:about="http://example.org/schema#instructor/Prof.DorisKearnsGoodwin">
+    <ex:coursesTeaching>
+      <rdf:Description rdf:about="http://example.org/schema#course/History">
+        <ex:courseName>History</ex:courseName>
+      </rdf:Description>
+    </ex:coursesTeaching>
+    <foaf:name>Prof. Doris Kearns Goodwin</foaf:name>
+  </ex:Instructor>
+  <ex:Instructor rdf:about="http://example.org/schema#instructor/Dr.AlbertMole">
+    <ex:coursesTeaching>
+      <rdf:Description rdf:about="http://example.org/schema#course/Chemistry">
+        <ex:courseName>Chemistry</ex:courseName>
+      </rdf:Description>
+    </ex:coursesTeaching>
+    <foaf:name>Dr. Albert Mole</foaf:name>
+  </ex:Instructor>
+  <rdf:Description rdf:about="http://example.org/course/ENG101">
+    <ex:courseName>English Literature</ex:courseName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#course/IntroductiontoPsychology">
+    <ex:courseName>Introduction to Psychology</ex:courseName>
+  </rdf:Description>
+  <ex:Instructor rdf:about="http://example.org/schema#instructor/Dr.JaneNewton">
+    <ex:coursesTeaching>
+      <rdf:Description rdf:about="http://example.org/schema#course/Physics">
+        <ex:courseName>Physics</ex:courseName>
+      </rdf:Description>
+    </ex:coursesTeaching>
+    <foaf:name>Dr. Jane Newton</foaf:name>
+  </ex:Instructor>
+  <ex:Instructor rdf:about="http://example.org/schema#instructor/animaw">
+    <ex:coursesTeaching>
+      <rdf:Description rdf:about="http://example.org/schema#course/web2">
+        <ex:courseName>web2</ex:courseName>
+      </rdf:Description>
+    </ex:coursesTeaching>
+    <foaf:name>animaw</foaf:name>
+  </ex:Instructor>
+  <ex:Instructor rdf:about="http://example.org/schema#instructor/an">
+    <ex:coursesTeaching>
+      <rdf:Description rdf:about="http://example.org/schema#course/EnglishLiterature">
+        <ex:courseName>English Literature</ex:courseName>
+      </rdf:Description>
+    </ex:coursesTeaching>
+    <foaf:name>an</foaf:name>
+  </ex:Instructor>
+  <rdf:Description rdf:about="http://example.org/schema#course/WorldHistory">
+    <ex:courseName>World History</ex:courseName>
+  </rdf:Description>
+  <ex:Instructor rdf:about="http://example.org/schema#instructor/Prof.AristotleLogic">
+    <ex:coursesTeaching>
+      <rdf:Description rdf:about="http://example.org/schema#course/Philosophy">
+        <ex:courseName>Philosophy</ex:courseName>
+      </rdf:Description>
+    </ex:coursesTeaching>
+    <foaf:name>Prof. Aristotle Logic</foaf:name>
+  </ex:Instructor>
+  <ex:Instructor rdf:about="http://example.org/schema#instructor/Dr.AlanTuring">
+    <ex:coursesTeaching>
+      <rdf:Description rdf:about="http://example.org/schema#course/ComputerScience">
+        <ex:courseName>Computer Science</ex:courseName>
+      </rdf:Description>
+    </ex:coursesTeaching>
+    <foaf:name>Dr. Alan Turing</foaf:name>
+  </ex:Instructor>
+  <rdf:Description rdf:about="http://example.org/course/CS101">
+    <ex:courseName>Introduction to Computer Science</ex:courseName>
+  </rdf:Description>
+  <ex:Instructor rdf:about="http://example.org/schema#instructor/Dr.JohnMathers">
+    <ex:coursesTeaching>
+      <rdf:Description rdf:about="http://example.org/schema#course/Mathematics">
+        <ex:courseName>Mathematics</ex:courseName>
+      </rdf:Description>
+    </ex:coursesTeaching>
+    <foaf:name>Dr. John Mathers</foaf:name>
+  </ex:Instructor>
+  <ex:Instructor rdf:about="http://example.org/schema#instructor/Prof.WilliamShakespeare">
+    <ex:coursesTeaching rdf:resource="http://example.org/schema#course/EnglishLiterature"/>
+    <foaf:name>Prof. William Shakespeare</foaf:name>
+  </ex:Instructor>
+</rdf:RDF>

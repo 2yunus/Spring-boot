@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Instructor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+    <h2>Edit Instructor</h2>
+    <form th:action="@{/instructors/update/{id}(id=${instructor.id})}" th:object="${instructor}" method="post">
+        <input type="hidden" th:field="*{id}"/>
+
+        <div class="form-group">
+            <label for="instructorName">Instructor Name:</label>
+            <input type="text" class="form-control" id="instructorName" th:field="*{name}" placeholder="Enter instructor name" required/>
+            <!-- Display validation error -->
+            <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger">Instructor name is required</p>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" class="form-control" id="email" th:field="*{email}" placeholder="Enter email" required/>
+            <!-- Display validation error -->
+            <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger">Email is required</p>
+        </div>
+
+
+        <div align="left">
+            <label class="form-label">Courses Teaching</label>
+            <select th:field="*{courseTeaching}" class="form-control" required>
+                <option value="">Select Course</option>
+                <!-- Assuming you have a list of courses available -->
+                <th:block th:each="course : ${courseList}">
+                    <option th:value="${course.name}" th:text="${course.name}"></option>
+                </th:block>
+            </select>
+            <p th:if="${#fields.hasErrors('courseTeaching')}" th:errors="*{courseTeaching}" class="text-danger">Please select a course</p>
+        </div>
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
+</div>
+</body>
+</html>

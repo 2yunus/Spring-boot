@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Lesson</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+    <h2>Edit Lesson</h2>
+    <form th:action="@{/lessons/update/{id}(id=${lesson.id})}" th:object="${lesson}" method="post">
+        <input type="hidden" th:field="*{id}"/>
+
+        <div class="form-group">
+            <label for="lessonTitle">Lesson Title:</label>
+            <input type="text" class="form-control" id="lessonTitle" th:field="*{title}" placeholder="Enter lesson title"/>
+            <!-- Display validation error -->
+            <p th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="text-danger">Lesson title is required</p>
+        </div>
+
+        <div class="form-group">
+            <label for="content">Content:</label>
+            <textarea class="form-control" id="content" th:field="*{content}" placeholder="Enter content"></textarea>
+            <!-- Display validation error -->
+            <p th:if="${#fields.hasErrors('content')}" th:errors="*{content}" class="text-danger">Content is required</p>
+        </div>
+
+        <div class="form-group">
+            <label for="course">Course:</label>
+            <input type="text" class="form-control" id="course" th:field="*{course}" placeholder="Enter course"/>
+            <!-- Display validation error -->
+            <p th:if="${#fields.hasErrors('course')}" th:errors="*{course}" class="text-danger">Course is required</p>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
+</div>
+</body>
+</html>

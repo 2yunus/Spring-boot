@@ -1,0 +1,69 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ex="http://example.org/schema#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  <rdf:Description rdf:about="http://example.org/schema#student/3">
+    <foaf:mbox>ENG101</foaf:mbox>
+    <foaf:name>English Literature</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#student/15">
+    <foaf:mbox>nm</foaf:mbox>
+    <foaf:name>n</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/course/MATH201">
+    <ex:courseName>Calculus I</ex:courseName>
+    <ex:courseCode>MATH201</ex:courseCode>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#student/4">
+    <foaf:mbox>HIST201</foaf:mbox>
+    <foaf:name>World History</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#student/5">
+    <foaf:mbox>PSY101</foaf:mbox>
+    <foaf:name>Introduction to Psychology</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#student/6">
+    <foaf:mbox>ECON101</foaf:mbox>
+    <foaf:name>Principles of Economics</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#student/11">
+    <foaf:mbox>cc222</foaf:mbox>
+    <foaf:name>physics</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#student/10">
+    <foaf:mbox>CHEM101</foaf:mbox>
+    <foaf:name>General Chemistry I</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#student/1">
+    <foaf:mbox>CS101</foaf:mbox>
+    <foaf:name>Introduction to Computer Science</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#student/2">
+    <foaf:mbox>MATH201</foaf:mbox>
+    <foaf:name>Calculus I</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/course/HIST201">
+    <ex:courseName>World History</ex:courseName>
+    <ex:courseCode>HIST201</ex:courseCode>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/course/ENG101">
+    <ex:courseName>English Literature</ex:courseName>
+    <ex:courseCode>ENG101</ex:courseCode>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#student/7">
+    <foaf:mbox>BIO101</foaf:mbox>
+    <foaf:name>Biology I</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/course/CS101">
+    <ex:courseName>Introduction to Computer Science</ex:courseName>
+    <ex:courseCode>CS101</ex:courseCode>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#student/8">
+    <foaf:mbox>SOC101</foaf:mbox>
+    <foaf:name>Introduction to Sociology</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/schema#student/9">
+    <foaf:mbox>PHIL101</foaf:mbox>
+    <foaf:name>Introduction to Philosophy</foaf:name>
+  </rdf:Description>
+</rdf:RDF>

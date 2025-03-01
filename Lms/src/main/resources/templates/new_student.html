@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Create New Course</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css"/>
+</head>
+<body>
+<div align="center">
+  <h1>Add New student</h1>
+  <br />
+  <div class="col-sm-4">
+    <form action="#" th:action="@{/students/save}" th:object="${student}" method="post">
+      <div align="left">
+        <label class="form-label">Name</label>
+        <input type="text" th:field="*{name}" class="form-control" placeholder="Name" />
+        <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger">Name is required</p>
+      </div>
+      <br />
+      <div align="left">
+        <label class="form-label">email</label>
+        <input type="text" th:field="*{email}" class="form-control" placeholder="email" />
+        <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger">email is required</p>
+      </div>
+      <br />
+      <div align="left">
+        <label class="form-label">enrolledCourses</label>
+        <input type="number" th:field="*{enrolledCourses}" class="form-control" placeholder="enrolledCourses" />
+        <p th:if="${#fields.hasErrors('enrolledCourses')}" th:errors="*{instructor}" class="text-danger">enrolledCourses is required</p>
+      </div>
+      <br />
+      <button type="submit" class="btn btn-info">Save</button>
+    </form>
+  </div>
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:schema="http://schema.org/"
+         xmlns:ex="http://example.org/lms#">
+
+    <rdf:Description rdf:about="http://example.org/lms#Student1">
+        <rdf:type rdf:resource="http://schema.org/Person"/>
+        <schema:identifier>1</schema:identifier>
+        <schema:givenName>Sophia</schema:givenName>
+        <schema:familyName>Davis</schema:familyName>
+        <schema:email>sophia.davis@example.org</schema:email>
+        <schema:memberOf rdf:resource="http://example.org/lms#University3"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/lms#Student2">
+        <rdf:type rdf:resource="http://schema.org/Person"/>
+        <schema:identifier>2</schema:identifier>
+        <schema:givenName>Daniel</schema:givenName>
+        <schema:familyName>Miller</schema:familyName>
+        <schema:email>daniel.miller@example.org</schema:email>
+        <schema:memberOf rdf:resource="http://example.org/lms#University4"/>
+    </rdf:Description>
+
+</rdf:RDF>

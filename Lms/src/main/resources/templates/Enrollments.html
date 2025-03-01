@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .col-sm-5 {
+        text-align: center;
+    }
+</style>
+<body>
+<div>
+    <h2>Spring Boot Crud System - Learning management system</h2>
+    <div align="left">
+        <h3><a th:href="@{/Enrollments/enrollment-form}">Add new</a></h3>
+    </div>
+    <div class="col-sm-5" align="center">
+        <div class="panel-body" align="center">
+            <table class="table">
+                <thead class="thead-blue">
+                <tr>
+                    <th>id</th>
+                    <th>student</th>
+                    <th>course</th>
+                    <th>enrollment_date</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="enrollment : ${enrollmentList}">
+                    <td th:text="${enrollment.id}">id</td>
+                    <td th:text="${enrollment.student.name}">student_name</td>
+                    <td th:text="${enrollment.course.title}">course_title</td>
+                    <td th:text="${enrollment.enrollmentDate}">enrollment_date</td>
+                    <td>
+                        <a th:href="@{'/Enrollments/edit/' + ${enrollment.id}}">Edit</a>
+                    </td>
+                    <td>
+                        <a th:href="@{/Enrollments/delete/{id}(id=${enrollment.id})}">Delete</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

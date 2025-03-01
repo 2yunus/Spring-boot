@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:vocab="http://example.org/lms#">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>RDF Search</title>
+    <style>
+        .col-sm-5 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div vocab="http://schema.org/" typeof="WebPage">
+    <div class="container">
+        <h2 property="name" class="my-4">Learning Management System</h2>
+
+        <div th:if="${message}" class="alert alert-info">
+            <p th:text="${message}"></p>
+        </div>
+        <table class="table table-striped">
+            <thead>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="student : ${students}">
+                <td th:text="${student.name}">Title</td>
+                <td th:text="${student.email}">Author</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <form action="/students/updates" method="post" class="mb-4">
+            <button type="submit" class="btn btn-primary">Update RDF File</button>
+        </form>
+
+        <div class="col-sm-5 mx-auto">
+            <h1 class="my-4">RDF Search</h1>
+            <form action="/students" method="get" class="mb-4">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" th:value="${name}">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" class="form-control" th:value="${email}">
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+
+            <h2 class="my-4">Search Results</h2>
+            <div id="searchResults">
+                <table class="table table-striped" typeof="Table">
+                    <thead class="thead-dark">
+                    <tr typeof="TableRow">
+                        <th property="TableColumn">Name</th>
+                        <th property="TableColumn">Email</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="result : ${results}" typeof="TableRow">
+                        <td property="name" th:text="${result.get('name').toString()}">Name</td>
+                        <td property="email" th:text="${result.get('email').toString()}">Email</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="panel-body my-4">
+                <h2>Student List</h2>
+                <table class="table table-striped" typeof="Table">
+                    <thead class="thead-dark">
+                    <tr typeof="TableRow">
+                        <th property="TableColumn">ID</th>
+                        <th property="TableColumn">Firstname</th>
+                        <th property="TableColumn">Lastname</th>
+                        <th property="TableColumn">Email</th>
+                        <th property="TableColumn">Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="student : ${studentList}" typeof="TableRow">
+                        <td property="id" th:text="${student.id}">ID</td>
+                        <td property="firstname" th:text="${student.firstname}">Firstname</td>
+                        <td property="lastname" th:text="${student.lastname}">Lastname</td>
+                        <td property="email" th:text="${student.email}">Email</td>
+                        <td property="delete">
+                            <a property="url" th:href="@{/students/delete/{id}(id=${student.id})}" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

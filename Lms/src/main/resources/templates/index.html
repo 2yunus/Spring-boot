@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Admin Dashboard</title>
+	<link rel="stylesheet" th:href="@{https://fonts.googleapis.com/css?family=Inter%3A600}" />
+	<link rel="stylesheet" th:href="@{https://fonts.googleapis.com/css?family=Jost%3A400%2C500%2C600}" />
+	<link rel="stylesheet" th:href="@{https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C600%2C700}" />
+	<link rel="stylesheet" th:href="@{https://fonts.googleapis.com/css?family=Poppins%3A700}" />
+	<link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css}" />
+	<link rel="stylesheet" th:href="@{/css/responsive.css}">
+	<link rel="stylesheet" th:href="@{../admin/adminStyle.css?v=1}">
+</head>
+<body>
+<header>
+
+</header>
+<form action="/index" method="post">
+<section class="welcome">
+	<h2>Admin Dashboard</h2>
+	<p>Welcome to the admin dashboard! You can manage various aspects of the system here.</p>
+</section>
+
+<main id="main-dashboard">
+	<aside id="left-section" style=" width:50%;">
+		<!-- HTML code with Thymeleaf expressions -->
+		<div class="main-card" th:onclick="|window.location.href='/instructors/instructor-form'|">
+			<div class="inner-card-div">
+				<div class="card-title">Manage <br>Instructor</div>
+				<div class="card-discription">
+					<div class="title-number">
+						<div class="sub-title">Total Instructors</div>
+						<div class="total-number" th:text="${totalUsers}"></div>
+					</div>
+					<div class="categories">
+						<div class="category1" th:text="${maleCount}">Male</div>
+						<div class="category2"> <span th:text="${femaleCount}">Female</span></div>
+					</div>
+					<div class="card-summary"></div>
+				</div>
+			</div>
+			<img class="users-gif" th:src="@{admin/instructer1.png}" />
+		</div>
+
+		<div class="main-item-card" th:onclick="|window.location.href='/courses/course-form'|">
+			<div class="inner-card-div">
+				<div class="card-title">Manage <br> Courses</div>
+				<div class="card-discription">
+					<div class="title-number">
+						<div class="sub-title">Total Courses</div>
+						<div class="total-number" th:text="${totalItems}"></div>
+					</div>
+					<div class="card-summary"></div>
+				</div>
+			</div>
+			<img class="users-gif" th:src="@{admin/course1.png}" />
+		</div>
+	</aside>
+
+	<aside id="right-section">
+		<div class="main-category-card">
+			<div class="main-item-card categories-card" th:onclick="|window.location.href='/students/student-form'|">
+				<div class="inner-card-div">
+					<div class="card-title">Manage Students</div>
+					<div class="card-discription">
+						<div class="title-number">
+							<div class="sub-title">Total Students</div>
+							<div class="total-number"></div>
+						</div>
+						<div class="card-summary">...</div>
+					</div>
+				</div>
+				<img class="users-gif" th:src="@{admin/student.png}" />
+			</div>
+		</div>
+	</aside>
+</main>
+</form>
+<footer id="foot">
+	<p>&copy; <span th:text="${#dates.format(#dates.createNow(),'yyyy')}"></span> Admin Dashboard. All rights reserved.</p>
+</footer>
+
+<script type="text/javascript">
+	window.addEventListener("scroll", function() {
+        var nav = document.querySelector("header");
+        nav.classList.toggle("sticky", window.scrollY > 0);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+    <h2>Edit Quiz</h2>
+    <form th:action="@{/quizzes/update/{id}(id=${quiz.id})}" th:object="${quiz}" method="post">
+        <input type="hidden" th:field="*{id}"/>
+
+        <div class="form-group">
+            <label for="quizTitle">Quiz Title:</label>
+            <input type="text" class="form-control" id="quizTitle" th:field="*{title}" placeholder="Enter quiz title"/>
+            <!-- Display validation error -->
+            <p th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="text-danger">Quiz title is required</p>
+        </div>
+
+        <div class="form-group">
+            <label for="questions">Questions:</label>
+            <input type="text" class="form-control" id="questions" th:field="*{questions}" placeholder="Enter questions"/>
+            <!-- Display validation error -->
+            <p th:if="${#fields.hasErrors('questions')}" th:errors="*{questions}" class="text-danger">Questions are required</p>
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="weight">Weight:</label>
+            <input type="number" class="form-control" id="weight" th:field="*{weight}" placeholder="Enter weight"/>
+            <!-- Display validation error -->
+            <p th:if="${#fields.hasErrors('weight')}" th:errors="*{weight}" class="text-danger">Weight is required</p>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create New Instructor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css"/>
+</head>
+<body>
+<div align="center">
+    <h1>Create New Instructor</h1>
+    <br />
+    <div class="col-sm-4">
+        <form action="#" th:action="@{/instructors/save}" th:object="${instructor}" method="post">
+            <div align="left">
+                <label class="form-label">Instructor Name</label>
+                <input type="text" th:field="*{name}" class="form-control" placeholder="Instructor Name" required/>
+                <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger">Name is required</p>
+            </div>
+            <br />
+            <div align="left">
+                <label class="form-label">Email</label>
+                <input type="email" th:field="*{email}" class="form-control" placeholder="Email"  required/>
+                <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger">Email is required</p>
+            </div>
+            <br />
+            <div align="left">
+                <label class="form-label">Courses Teaching</label>
+                <select th:field="*{courseTeaching}" class="form-control" required>
+                    <option value="">Select Course</option>
+                    <!-- Assuming you have a list of courses available -->
+                    <th:block th:each="course : ${courseList}">
+                        <option th:value="${course.name}" th:text="${course.name}"></option>
+                    </th:block>
+                </select>
+                <p th:if="${#fields.hasErrors('courseTeaching')}" th:errors="*{courseTeaching}" class="text-danger">Please select a course</p>
+            </div>
+
+            <br />
+            <button type="submit" class="btn btn-info">Save</button>
+        </form>
+    </div>
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
